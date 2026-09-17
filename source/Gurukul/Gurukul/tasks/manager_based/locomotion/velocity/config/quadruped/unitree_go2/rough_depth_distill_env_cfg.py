@@ -39,9 +39,13 @@ GO2_DEPTH_CAMERA_CFG = RayCasterCameraCfg(
     prim_path="{ENV_REGEX_NS}/Robot/base",
     data_types=["distance_to_camera"],
     offset=RayCasterCameraCfg.OffsetCfg(
-        # pos=(0.33, 0.0, 0.08), #old original values
-        # pos=(0.048 + 0.32715, 0.0 - 0.00003, 0.025 + 0.04297), # Eyeballed from the real robot and added to the URDF base-to-camera mount offset
-        pos = (0.34, 0.0, 0.06), # MGDP values
+        # pos=(0.33, 0.0, 0.08), # old original values
+
+        # Eyeballed from the real robot and added to the URDF base-to-camera mount offset
+        # pos=(0.048 + 0.32715, 0.0 - 0.00003, 0.025 + 0.04297), # old mount
+        pos=(0.090 + 0.32715, 0.0 - 0.00003, 0.045 + 0.04297), # new mount
+        
+        # pos = (0.34, 0.0, 0.06), # MGDP values
         # rot=_quat_from_euler_xyz_deg(180.0, 70.0, -90.0), # Second value means 20 degrees downward facing from horizontal axis, TUNE THIS! 
         rot=_quat_from_euler_xyz_deg(180.0, 60.0, -90.0), # MGDP values
         convention="ros",
