@@ -47,7 +47,8 @@ GO2_DEPTH_CAMERA_CFG = RayCasterCameraCfg(
         
         # pos = (0.34, 0.0, 0.06), # MGDP values
         # rot=_quat_from_euler_xyz_deg(180.0, 70.0, -90.0), # Second value means 20 degrees downward facing from horizontal axis, TUNE THIS! 
-        rot=_quat_from_euler_xyz_deg(180.0, 60.0, -90.0), # MGDP values
+        # rot=_quat_from_euler_xyz_deg(180.0, 60.0, -90.0), # MGDP values
+        rot=_quat_from_euler_xyz_deg(180.0, 30.0, -90.0), # Max downward facing is 60 deg, with FOV gives straight down visibility
         convention="ros",
     ),
     depth_clipping_behavior="max",
